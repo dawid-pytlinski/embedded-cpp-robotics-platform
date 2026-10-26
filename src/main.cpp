@@ -11,6 +11,13 @@ int main()
 
     std::cin >> arm_length;
     
+    if (std::cin.fail())
+    {
+        std::cout << "Invalid input. Enter a number.";
+
+        return 1;
+    }
+    
     if(arm_length <= 0)
     {
     
@@ -19,6 +26,8 @@ int main()
         return 1;
 
     }
+
+
 
     std::cout << "Give me a angle degree: " << std::endl;
     std::cin >> angle_deg;
