@@ -7,13 +7,13 @@ int main()
 
     std::cout << "Embedded C++ Robotics Platform! " << std::endl;
 
-    std::cout << "Geve me a length your arm: " << std::endl;
+    std::cout << "Enter the arm length in cm: " << std::endl;
 
     std::cin >> arm_length;
     
     if (std::cin.fail())
     {
-        std::cout << "Invalid input. Enter a number.";
+        std::cout << "Invalid input. Enter the arm length in cm.";
 
         return 1;
     }
@@ -25,10 +25,17 @@ int main()
         return 1;
     }
 
-    std::cout << "Give me a angle degree: " << std::endl;
+    std::cout << "Enter the angle in degrees: " << std::endl;
     std::cin >> angle_deg;
 
-    if (angle_deg <= -90 || angle_deg >= 90)
+    if (std::cin.fail())
+    {
+        std::cout << "Invalid input. Enter the arm angle in degrees.";
+
+        return 1;
+    }
+    
+    if (angle_deg < -90 || angle_deg > 90)
     {
         std::cout << "Angle must be between -90 and 90 degrees.";
 
