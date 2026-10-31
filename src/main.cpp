@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int main() 
 {   const double pi = 3.141592653589793;
@@ -45,10 +46,14 @@ int main()
     }
     
     double angle_rad = angle_deg * pi / 180;
+    double x = arm_length * std::cos(angle_rad);
+    double y = arm_length * std::sin(angle_rad);
 
     std::cout << "Arm length: " << arm_length << " cm." << std::endl; 
     std::cout << "Angle: " << angle_deg << " deg." << std::endl; 
     std::cout << "Angle in radians: " << angle_rad << " rad." << std::endl;
+    std::cout << "Coordinates x: " << x << " cm." << std::endl;
+    std::cout << "Coordinites y: " << y << " cm." << std::endl;
 
     return 0;
 }
