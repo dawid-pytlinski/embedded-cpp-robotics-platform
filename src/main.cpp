@@ -5,7 +5,6 @@ int main()
     double arm_length; 
     double angle_deg;
 
-    double angle_rad;
     
 
     std::cout << "Embedded C++ Robotics Platform! " << std::endl;
@@ -45,7 +44,7 @@ int main()
         return 1;
     }
     
-    angle_rad = angle_deg * pi / 180;
+    double angle_rad = angle_deg * pi / 180;
 
     std::cout << "Arm length: " << arm_length << " cm." << std::endl; 
     std::cout << "Angle: " << angle_deg << " deg." << std::endl; 
