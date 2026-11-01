@@ -1,6 +1,14 @@
 #include <iostream>
 #include <cmath>
 
+double degrees_to_radians(double degrees)
+{
+    const double pi = 3.141592653589793;
+
+    return degrees * pi / 180;
+}
+
+
 int main() 
 {   const double pi = 3.141592653589793;
     double arm_length; 
@@ -48,6 +56,7 @@ int main()
     double angle_rad = angle_deg * pi / 180;
     double x = arm_length * std::cos(angle_rad);
     double y = arm_length * std::sin(angle_rad);
+
 
     std::cout << "Arm length: " << arm_length << " cm." << std::endl; 
     std::cout << "Angle: " << angle_deg << " deg." << std::endl; 
