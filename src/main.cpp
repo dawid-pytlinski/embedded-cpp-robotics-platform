@@ -10,11 +10,9 @@ double degrees_to_radians(double degrees)
 
 
 int main() 
-{   const double pi = 3.141592653589793;
+{   
     double arm_length; 
     double angle_deg;
-
-    
 
     std::cout << "Embedded C++ Robotics Platform! " << std::endl;
 
@@ -53,7 +51,9 @@ int main()
         return 1;
     }
     
-    double angle_rad = angle_deg * pi / 180;
+    double angle_rad = degrees_to_radians(angle_deg);
+
+
     double x = arm_length * std::cos(angle_rad);
     double y = arm_length * std::sin(angle_rad);
 
